@@ -1,0 +1,394 @@
+html, body, .grid-container {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+ }
+
+a{
+  color:white;
+  text-decoration: none;
+}
+a:visited, a:hover{
+   text-decoration: underline;
+   cursor: pointer;
+ }
+
+#tvlogo{
+  z-index: 111;
+  position: fixed;
+  top:1vh;
+  right:2vw;
+  width: 10%;
+}
+#tvlogo img{
+  display: block;
+  max-width: 100%;
+}
+#vs{
+  display: none;
+  z-index: 1111;
+  position: fixed;
+  top:60vh;
+  left:35vw;
+  width: 10%;
+}
+#vs img{
+  display: block;
+  max-width: 100%;
+}
+#vs img:hover{
+  transform: scale(1.5);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.5fr 0.7fr 1fr;
+  grid-template-rows: 0.2fr 0.7fr 3.2fr 1.4fr 0.2fr;
+  /* gap: 1px 1px; */
+  grid-template-areas: "bar1 bar1 bar1 bar1" "banner1 banner1 banner1 banner1" "list flag TV TV" "list banner2 banner2 banner2" "bar2 bar2 bar2 bar2";
+}
+
+.TV {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "channel1 parties" "channel2 parties";
+  grid-area: TV;
+}
+
+.channel1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.7fr 0.3fr;
+  background-color: black;
+  grid-area: channel1;
+}
+.channel1 .title1{
+  background-image: url(../img/assets/button3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color:yellow;
+  font-size: 2vw;
+  text-align: right;
+  padding-right:3vw;
+  margin-bottom:-3vh;
+  text-decoration:none;
+  text-shadow:0px 1px 1px black;
+  font-family: 'Anton', sans-serif;
+}
+
+.channel2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.7fr 0.3fr;
+  background-color: black;
+}
+.channel2 .title2{
+  background-image: url(../img/assets/button2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color:yellow;
+  font-size: 2vw;
+  text-align: right;
+  padding-right:3vw;
+  margin-bottom:-3vh;
+  text-decoration:none;
+  text-shadow:0px 1px 1px black;
+  font-family: 'Anton', sans-serif;
+}
+
+.parties {
+  display: grid;
+  background: rgb(0,200,255);
+  background: linear-gradient(90deg, rgba(0,200,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,200,255,1) 100%);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.3fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "logo1" "vs" "logo2";
+  grid-area: parties;
+}
+.parties img{
+  width: 100%;
+  display: block;
+}
+
+.flag {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "flag1 flag2";
+  grid-area: flag;
+}
+.flag:hover{
+  cursor:pointer;
+}
+
+#flag1 { grid-area: flag1; }
+
+#flag2 { grid-area: flag2; }
+.flag img{
+  max-width: 100%;
+  /* max-height: 100%; */
+  display: block;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "card" "card" "card" "card" "card" "card" "card" "card" "card" "card" "card" "card" "card";
+  grid-area: list;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Anton', sans-serif;
+}
+.list .card{
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 3fr 0.5fr;
+  grid-template-rows: 1fr;
+  box-shadow:inset 0px 1px 0px 0px #6fde9b;
+  background:linear-gradient(to bottom, #00ff84 5%, #0aa67f 100%);
+  background-color:#00ff84;
+  border-radius:6px;
+  border:1px solid #74b807;
+  cursor:pointer;
+  color:#ffffff;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #008268;
+}
+.list .card:hover{
+  background:linear-gradient(to bottom, #0aa67f 5%, #00ff84 100%);
+	background-color:#0aa67f;
+}
+
+
+.list .number {
+  text-align: center;
+  font-family: arial, sans-serif;
+  font-size: 1.6vw;
+  font-weight: bold;
+  color:red;
+}
+.list .heads img{
+  margin-left: -10%;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.list .name{
+  margin-left: -50%;
+  font-size: 2vw;
+}
+.list .count{
+  margin-left: -250%;
+  font-size: 2vw;
+  margin-right: -10%;
+}
+.parties{
+  grid-area: parties;
+}
+.banner2 {
+  display: grid;
+  grid-template-columns: 0.8fr 5fr;
+  grid-template-rows: 0.7fr 1.3fr;
+  gap: 1px 1px;
+  grid-template-areas: "time titletext titletext" "logo titletext titletext";
+  grid-area: banner2;
+  font-family: 'Anton', sans-serif;
+}
+.time {
+  grid-area: time;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 28%, rgba(255,0,0,1) 100%);
+  color:white;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow:0px 1px 1px black;
+ }
+
+.logo {
+  /* background-image: url(../img/assets/sky.jpg);
+  background-size:cover; */
+  grid-area: logo;
+  background: rgb(0,200,255);
+  background: linear-gradient(0deg, rgba(0,200,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+.logo img{
+  max-width: 100%;
+  display: block;
+
+  /* margin-left: 10%;
+  margin-right: 20%; */
+  margin-bottom:-15%;
+}
+
+.titletext {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  gap: 1px 1px;
+  grid-template-areas: "maintext maintext maintext" "subtitle subtitle subtitle";
+  grid-area: titletext;
+
+}
+
+.maintext {
+  background-image: url(../img/assets/button1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-area: maintext;
+  color: blue;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  /* background: rgb(150,150,0);
+  background: linear-gradient(3deg, rgba(150,150,0,1) 0%, rgba(255,255,255,1) 38%, rgba(251,255,0,1) 100%); */
+}
+
+.subtitle {
+  grid-area: subtitle;
+  color: white;
+  font-size: 2.3vw;
+  text-align: center;
+
+}
+
+.banner1 { grid-area: banner1; }
+.banner1 img{
+  width: 100vw;
+  /* max-height: 200%; */
+  display: block;
+}
+.bar1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  grid-area: bar1;
+  width: 100%;
+  overflow: hidden;
+  height: 3vh;
+  background-color: blue;
+  box-sizing: content-box;
+ }
+ .bar1 .ticker1{
+   display: inline-block;
+   white-space: nowrap;
+   padding-right: 100%;
+   box-sizing: content-box;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+   animation-timing-function: linear;
+   -webkit-animation-name: ticker1;
+   animation-name: ticker1;
+   -webkit-animation-duration: 20s;
+   animation-duration: 20s;
+ }
+ .bar1 .ticker__item {
+   display: inline-block;
+   padding-left: 2vw;
+   padding-right: 2vw;
+   font-size: 2.5vh;
+   color: white;
+   font-family: 'Archivo', sans-serif;
+   font-weight: 700;
+ }
+ @-webkit-keyframes ticker1 {
+   0% {
+     -webkit-transform: translate3d(-20%, 0, 0);
+     transform: translate3d(-20%, 0, 0);
+     visibility: visible;
+   }
+   100% {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   }
+ }
+ @keyframes ticker1 {
+   0% {
+     -webkit-transform: translate3d(-20%, 0, 0);
+     transform: translate3d(-20%, 0, 0);
+     visibility: visible;
+   }
+   100% {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+.bar2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 4vh;
+  background-color: #e41b17;
+  box-sizing: content-box;
+  grid-area: bar2;
+
+}
+.bar2 .ticker{
+  display: inline-block;
+  height: 4vh;
+  padding-bottom: 1vh;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 70s;
+  animation-duration: 70s;
+}
+.bar2 .ticker__item {
+  display: inline-block;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 3vh;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+}
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-5%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+ /* border: 1px solid red; */
+ position: relative;
+}
+
+/* .grid-container *:after {
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+} */
