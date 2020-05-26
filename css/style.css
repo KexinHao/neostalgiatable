@@ -4,6 +4,7 @@ body{
     background-size: cover;
     font-family: 'Dosis', sans-serif;
     font-weight:lighter;
+    overflow-x: hidden;
 }
 a{
   color:black;
@@ -82,6 +83,7 @@ a:hover{
 .rotatingchecker {
   grid-area: rotatingchecker;
   -webkit-transition: -webkit-transform 20s ease-in-out;
+  -moz-transition: -webkit-transform 20s ease-in-out;
   transition:         transform 20s ease-in-out;
   /* margin-top:-3em;
   margin-left:3em; */
@@ -90,6 +92,7 @@ a:hover{
 }
 .rotatingchecker:hover {
   -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
           transform: rotate(720deg);
 }
 .rotatingchecker img{
@@ -108,11 +111,13 @@ a:hover{
 .rotatingcookie {
   grid-area: rotatingcookie;
   -webkit-transition: -webkit-transform 10s ease-in-out;
+  -moz-transition: -webkit-transform 10s ease-in-out;
   transition:         transform 10s ease-in-out;
   margin:2em;
  }
  .rotatingcookie:hover {
    -webkit-transform: rotate(720deg);
+   -moz-transform: rotate(720deg);
            transform: rotate(720deg);
  }
  .rotatingcookie img{
@@ -165,6 +170,7 @@ a:hover{
 
 #cookieboard {
   display:none;
+  font-size:1.2vw;
   padding:1vw;
   width:14vw;
   height:47vh;
@@ -183,6 +189,7 @@ a:hover{
 }
 #checkerboard {
   display:none;
+  font-size:1.2vw;
   padding:1vw;
   width:27vw;
   height:39vh;
@@ -216,16 +223,10 @@ a:hover{
   top:39%;
   background-color: white;
   border: 1px solid #000000;
-  font-family: 'Dosis', sans-serif;
   font-size:1.2vw;
   font-weight:lighter;
   border-radius: 40px 0px 40px 0px;
   text-align: center;
-}
-p5{
-  font-family: 'Dosis', sans-serif;
-  font-size:1.2vw;
-  font-weight:lighter;
 }
 
 
