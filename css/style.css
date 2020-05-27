@@ -1,7 +1,8 @@
 html, body, .grid-container { height: 100%; margin: 0; }
 body{
-    background-image: url("../img/bg/table.png");
-    background-size: cover;
+    background-image: url("../img/bg/table2.png");
+    background-size:contain;
+    background-repeat: no-repeat;
     font-family: 'Dosis', sans-serif;
     font-weight:lighter;
     overflow-x: hidden;
@@ -169,16 +170,15 @@ a:hover{
 }
 
 #cookieboard {
-  display:none;
   font-size:1.2vw;
   padding:1vw;
   width:14vw;
-  height:47vh;
+  height:77vh;
   overflow: scroll;
-  z-index: 100;
+  z-index: 999;
   position: absolute;
-  left:52%;
-  top:50%;
+  left:82%;
+  top:18%;
   background-color: white;
   border: 1px solid #000000;
   /* border-radius: 40px 0px 40px 0px; */
@@ -188,19 +188,19 @@ a:hover{
   max-width: 100%;
 }
 #checkerboard {
-  display:none;
   font-size:1.2vw;
-  padding:1vw;
-  width:27vw;
-  height:39vh;
+  padding-left:1vw;
+  padding-right:3vw;
+  width:23vw;
+  height:75vh;
   overflow: scroll;
   z-index: 100;
   position: absolute;
-  left:20%;
-  top:20%;
+  left:57%;
+  top:19%;
   background-color: white;
   border: 1px solid #000000;
-  /* border-radius: 40px 0px 40px 0px; */
+  border-radius: 40px 0px 40px 0px;
 }
 #checkerboard img{
   display: block;
@@ -209,24 +209,35 @@ a:hover{
 #checkerboard iframe{
   display: block;
   width: 70%;
-  height: 60%;
+  height: 30%;
 }
 #aboutboard {
-  display:none;
   padding:2vw;
-  width:50vw;
-  height:39vh;
+  width:25vw;
+  height:52vh;
   overflow: scroll;
   z-index: 22;
   position: absolute;
-  left:17%;
-  top:39%;
-  background-color: white;
-  border: 1px solid #000000;
+  left:3%;
+  top:15%;
   font-size:1.2vw;
   font-weight:lighter;
-  border-radius: 40px 0px 40px 0px;
+  /* border-radius: 40px 0px 40px 0px; */
   text-align: center;
+}
+#maniboard {
+  padding:2vw;
+  width:22vw;
+  height:44vh;
+  overflow: scroll;
+  z-index: 22;
+  position: absolute;
+  left:33%;
+  top:30%;
+  font-size:1.2vw;
+  font-weight:lighter;
+  /* border-radius: 40px 0px 40px 0px; */
+  text-align: left;
 }
 
 
