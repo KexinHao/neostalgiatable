@@ -9,23 +9,17 @@
 
   <script>
   $(function(){
-    $('.rotatingcookie').click(function(){
-     $('#cookieboard').toggle();
+    $('#manibar').click(function(){
+     $('#maniboard').toggle();
      });
-     $('.rotatingchecker').click(function(){
-      $('#checkerboard').toggle();
-      });
 
-     $('#buttonabout').click(function(){
+     $('#aboutbar').click(function(){
       $('#aboutboard').toggle();
       });
-      $('.main-title').click(function(){
-       $('#aboutboard').toggle();
-       });
-      $('#buttoncookie').click(function(){
+      $('#cookiebar').click(function(){
        $('#cookieboard').toggle();
        });
-       $('#buttonchecker').click(function(){
+       $('#checkerbar').click(function(){
         $('#checkerboard').toggle();
         });
   })
@@ -71,10 +65,20 @@
         </div>
       </div>
       </div> -->
+      <div class="main-title">
+        <img src="img/titles/nt5.png" />
+      </div>
+      <div class="bars">
+        <div id="aboutbar">about</div>
+        <div id="manibar">manifesto</div>
+        <div id="checkerbar">Check-in Checker</div>
+        <div id="cookiebar">Unfolded Truth</div>
+      </div>
       <div class="board">
         <div id="cookieboard">
           <br /><br />
-           <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">WFFF presents: <br />Unfolded Truth</span><br /><br />
+           <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">WFFF presents: <br />Unfolded Truth</span><br /><br /> -->
+            <br /><br />
             <span>Speaker: Kexin Hao</span><br />
             <a href="https://youtu.be/KpE7F3_lkqA" target="_blank"><span href>Watch Full Video Here</span><br /></a>
             <img id="dish" src="img/stuff/dish.png" />
@@ -93,13 +97,13 @@
         </div>
         <div id="checkerboard">
           <br /><br />
-           <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">TGGG presents: <br />Check-in Checker: A Total Guide</span><br /><br />
+           <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">TGGG presents: <br />Check-in Checker: A Total Guide</span><br /><br /> -->
            <a href="https://soundcloud.com/kexinhao/sets/how-to-play-chinese-checkers-a-total-guide" target="_blank"><span href>Listen To Full Audio Here</span><br /></a>
            <div class="rotatingchecker">
              <img src="img/stuff/checker.png" />
            </div>
           <br />
-          <p>
+          <p style="text-align:center;">
             Checker checkes in 3 times:<br />
             家<br />
             Home<br />
@@ -177,7 +181,8 @@
           </p>
         </div>
         <div id="aboutboard">
-           <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">NEOstalgic Table</span><br /><br />
+           <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">NEOstalgic Table</span><br /><br /> -->
+           <br /><br /><br /><br />
            <div id="sub" style="font-style: italic; text-align:right;">
                Woven into the fabric of memory, <br />
                nostalgia is the simultaneous sweetness and the bitterness<br />
@@ -230,7 +235,7 @@
 
         </div>
         <div id="maniboard">
-          <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">Manifesto</span><br /><br />
+          <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">Manifesto</span><br /><br /> -->
           <span style="text-decoration:underline;">WFFF × TGGG announcement</span><br />
           Food and game.<br /><br />
 
@@ -253,6 +258,7 @@
           We play chess untill we fall asleep.<br />
           In the night, the pieces draw a new map on the checker board<br />
           for us to revisit in the dream
+          <br /><br /><br /><br />
         </div>
       </div>
     </div>

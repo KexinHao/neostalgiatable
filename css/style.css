@@ -1,8 +1,8 @@
 html, body, .grid-container { height: 100%; margin: 0; }
 body{
-    background-image: url("../img/bg/table2.png");
-    background-size:contain;
-    background-repeat: no-repeat;
+    /* background-image: url("../img/bg/table2.png"); */
+    /* background-size:contain;
+    background-repeat: no-repeat; */
     font-family: 'Dosis', sans-serif;
     font-weight:lighter;
     overflow-x: hidden;
@@ -15,7 +15,7 @@ a:hover{
   color:white;
   background-color: black;
 }
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr 1fr 1fr;
   grid-template-rows: 0.4fr 1.6fr 1fr;
@@ -40,9 +40,6 @@ a:hover{
   color: black;
   font-size: 1.3vw;
   font-weight:bold;
-  /* -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black; */ */
 }
 .menu #textbox1 span:hover{
   cursor:pointer;
@@ -67,9 +64,6 @@ a:hover{
   font-size: 1.2vw;
   font-weight:normal;
   margin-right:5vw;
-  /* -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black; */ */
 }
 
 .free-area {
@@ -79,6 +73,96 @@ a:hover{
   gap: 1px 1px;
   grid-template-areas: "videochecker rotatingcookie" "rotatingchecker videocookie";
   grid-area: free-area;
+} */
+/* .rotatingcookie {
+  grid-area: rotatingcookie;
+  -webkit-transition: -webkit-transform 10s ease-in-out;
+  -moz-transition: -webkit-transform 10s ease-in-out;
+  transition:         transform 10s ease-in-out;
+  margin:2em;
+ }
+ .rotatingcookie:hover {
+   -webkit-transform: rotate(720deg);
+   -moz-transform: rotate(720deg);
+           transform: rotate(720deg);
+ }
+ .rotatingcookie img{
+   display: block;
+   max-width: 90%;
+ }
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "main-title main-title logo" "main-title main-title logo";
+  grid-area: title;
+}
+.title:hover{
+  cursor:pointer;;
+} */
+
+
+.bars div{
+  margin-bottom: -2vh;
+  font-family: 'Concert One', cursive;
+  -webkit-text-stroke: 0.06vw black;
+  -webkit-text-fill-color: white;
+  font-size: 5vh;
+  text-align: center;
+  box-shadow:inset 0px 0px 2vh 0.3vh #957695;
+  background:linear-gradient(to bottom, #dedede 8%, #4f4f4f 80%);
+  background-color:#faf4be;
+  border-radius:50vh;
+  display:inline-block;
+  padding:1.2vh 1.2vh;
+  text-decoration:none;
+  border: 0.05vw solid #000000;
+}
+.bars div:hover{
+  cursor: pointer;
+  background:linear-gradient(to bottom, #4f4f4f 8%, #dedede 80%);
+  background-color:#e3befa;
+}
+.bars #aboutbar{
+  position: absolute;
+  z-index: 9999;
+  left:2%;
+  top:5%;
+  width: 25vw;
+}
+.bars #manibar{
+  position: absolute;
+  z-index: 9999;
+  width:20vw;
+  left:30%;
+  top:79%;
+}
+.bars #checkerbar{
+  position: absolute;
+  z-index: 9999;
+  transform: rotate(90deg);
+  left:43%;
+  top:70%;
+}
+.bars #cookiebar{
+  position: absolute;
+  z-index: 9999;
+  left:77%;
+  top:20%;
+}
+
+.main-title {
+  z-index: 9998;
+  position: fixed;
+  top: 0vh;
+}
+.main-title img{
+  display:block;
+  max-width: 69%;
+  padding-left: 28vw;
+  padding-top: 0vh;
 }
 
 .rotatingchecker {
@@ -109,78 +193,20 @@ a:hover{
   width: 50%;
   height:44%;
 }
-.rotatingcookie {
-  grid-area: rotatingcookie;
-  -webkit-transition: -webkit-transform 10s ease-in-out;
-  -moz-transition: -webkit-transform 10s ease-in-out;
-  transition:         transform 10s ease-in-out;
-  margin:2em;
- }
- .rotatingcookie:hover {
-   -webkit-transform: rotate(720deg);
-   -moz-transform: rotate(720deg);
-           transform: rotate(720deg);
- }
- .rotatingcookie img{
-   display: block;
-   max-width: 90%;
- }
-
-.videocookie { grid-area: videocookie; }
-.videocookie iframe{
-  padding-left: -5vw;
-  padding-top:-2vh;
-  style="border:0;"
-  display: block;
-  width: 90%;
-  height:80%;
-}
-.title {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas: "main-title main-title logo" "main-title main-title logo";
-  grid-area: title;
-}
-.title:hover{
-  cursor:pointer;;
-}
-
-.main-title {
-  display: grid;
-  grid-template-columns: ;
-  grid-template-rows: ;
-  gap: 1px 1px;
-  grid-template-areas: ".";
-  grid-area: main-title;
-}
-.main-title img{
-  display:block;
-  max-height:120%;
-  padding-left: 10vw;
-  padding-top: 2vh;
-}
-.logo { grid-area: logo; }
-.logo img{
-  display:block;
-  max-height:130%;
-  padding-left:10vw;
-  padding-top: 2vh;
-}
 
 #cookieboard {
+  display: none;
   font-size:1.2vw;
   padding:1vw;
-  width:14vw;
+  width:20vw;
   height:77vh;
   overflow: scroll;
   z-index: 999;
   position: absolute;
-  left:82%;
-  top:18%;
+  left:77%;
+  top:20%;
   background-color: white;
-  border: 1px solid #000000;
+  border: 0.05vw solid #000000;
   /* border-radius: 40px 0px 40px 0px; */
 }
 #cookieboard img{
@@ -188,6 +214,7 @@ a:hover{
   max-width: 100%;
 }
 #checkerboard {
+  display: none;
   font-size:1.2vw;
   padding-left:1vw;
   padding-right:3vw;
@@ -196,11 +223,11 @@ a:hover{
   overflow: scroll;
   z-index: 100;
   position: absolute;
-  left:57%;
+  left:52%;
   top:19%;
   background-color: white;
-  border: 1px solid #000000;
-  border-radius: 40px 0px 40px 0px;
+  border: 0.05vw solid #000000;
+  border-radius: 0px 10px 0px 30px;
 }
 #checkerboard img{
   display: block;
@@ -212,32 +239,40 @@ a:hover{
   height: 30%;
 }
 #aboutboard {
+  display: none;
   padding:2vw;
   width:25vw;
-  height:52vh;
+  height:84vh;
   overflow: scroll;
   z-index: 22;
   position: absolute;
-  left:3%;
-  top:15%;
+  left:2%;
+  top:5%;
   font-size:1.2vw;
   font-weight:lighter;
   /* border-radius: 40px 0px 40px 0px; */
   text-align: center;
+  background-color: white;
+  border: 0.05vw solid #000000;
+  border-radius: 40px 0px 40px 0px;
 }
 #maniboard {
+  display: none;
   padding:2vw;
-  width:22vw;
-  height:44vh;
+  width:20vw;
+  height:60vh;
   overflow: scroll;
   z-index: 22;
   position: absolute;
-  left:33%;
-  top:30%;
+  left:30%;
+  top:15%;
   font-size:1.2vw;
   font-weight:lighter;
   /* border-radius: 40px 0px 40px 0px; */
   text-align: left;
+  background-color: white;
+  border: 0.05vw solid #000000;
+  border-radius: 20px 20px 15px 0px;
 }
 
 
