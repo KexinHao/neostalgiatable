@@ -102,8 +102,27 @@ a:hover{
 .title:hover{
   cursor:pointer;;
 } */
+.graphic img{
 
-
+  z-index: 9998;
+  display: block;
+  position: absolute;
+}
+.graphic #bubble1{
+  max-width: 17%;
+  top:3%;
+  left:16%;
+}
+.graphic #bubble2{
+  max-width: 37%;
+  top:73%;
+  left:26%;
+}
+.graphic #bubble3{
+  max-width: 17%;
+  top:17%;
+  left:62%;
+}
 .bars div{
   margin-bottom: -2vh;
   font-family: 'Concert One', cursive;
@@ -186,11 +205,11 @@ a:hover{
 }
 .videochecker { grid-area: videochecker; }
 .videochecker iframe{
-  padding-left: 15vw;
+  padding: 15vw;
   padding-top:2vh;
   style="border:0;"
   display: block;
-  width: 50%;
+  width: 70%;
   height:44%;
 }
 
@@ -255,6 +274,10 @@ a:hover{
   background-color: white;
   border: 0.05vw solid #000000;
   border-radius: 40px 0px 40px 0px;
+}
+#aboutboard img{
+  display: block;
+  max-width: 100%;
 }
 #maniboard {
   display: none;
