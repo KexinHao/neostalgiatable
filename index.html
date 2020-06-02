@@ -1,92 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Neostalgia Table</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neostalgia Table</title>
+  <!-- include stylesheets here -->
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
 
-  <script>
-  $(function(){
-    $('#manibar').click(function(){
-     $('#maniboard').toggle();
-     });
-
-     $('#aboutbar').click(function(){
-      $('#aboutboard').toggle();
+$(function(){
+// $(function(){
+   $('.title').click(function(){
+       $('#image' + $(this).attr('id')).show();
+       $('.imagebox > div').not('#image' + $(this).attr('id')).hide();
+       $('#info' + $(this).attr('id')).show();
+       $('.informationbox > div').not('#info' + $(this).attr('id')).hide();
+       window.location.hash = $(this).attr('id');
       });
-      $('#cookiebar').click(function(){
-       $('#cookieboard').toggle();
-       });
-       $('#checkerbar').click(function(){
-        $('#checkerboard').toggle();
-        });
-  })
+
+      if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        // alert (hash);
+        $("#image" + hash).show();
+        $('.imagebox > div').not("#image" + hash).hide();
+        $("#info" + hash).show();
+        $('.informationbox > div').not("#info" + hash).hide();
+      };
+   })
   </script>
-  <body>
-    <!-- <div class="grid-container">
-      <div class="title">
-        <div class="main-title">
-          <img src="img/titles/nt4.png" />
+</head>
+<body>
+
+
+  <div class="menu">
+    <div class="title" id="about">about</div>
+    <div class="title" id="manifesto">manifesto</div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div class="title" id="cookie">Unfolded Truth</div>
+    <div class="title" id="checker">Check-in Checker</div>
+  </div>
+  <!-- <div class="menu-vertical">
+
+  </div> -->
+
+
+
+   <div class="content">
+
+     <div class="imagebox">
+        <div id="imageabout">
+          <img src="img/neoneo.svg" />
         </div>
-        <div class="logo">
+        <div id="imagemanifesto">
+          <img src="img/logo.svg" />
+        </div>
+        <div id="imagecookie">
+          <iframe  src="https://www.youtube.com/embed/KpE7F3_lkqA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="imagechecker">
+          <img src="img/board1.png" />
+          <img src="img/board2.png" />
+          <img src="img/board3.png" />
+          <img src="img/board4.png" />
         </div>
       </div>
-      <div class="menu">
-        <img src="img/stuff/menu3.png" />
-        <div id="textbox1">
-          <span id="buttonabout">About</span><br />
-          <span id="buttonmanifesto">Manifesto</span><br />
-          <span id="buttoncookie">Unfolded Truth</span><br />
-          <span id="buttonchecker">Check-in Checker</span>
-          </p>
+
+      <div class="informationbox">
+        <div id="infoabout">
+          <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">NEOstalgic Table</span><br /><br /> -->
+          <br /><br /><br /><br /><br /><br />
+          <div id="sub" style="font-style: italic; text-align:left;">
+           Woven into the fabric of memory, <br />
+           nostalgia is the simultaneous sweetness and the bitterness<br />
+           of wanting to return to another place or time.<br />
+           It is a longing for a home that no longer exists or has never existed.<br />
+           Nostalgia is a sentiment of loss and displacement,<br />
+           but also a romance with one's own fantasy.<br /><br />
+           <!-- <span id="credit" style="font-size: 0.9vw; font-style:normal;">Embodied Artifacts: Memory, Nostalgia and Mid-Century Objects by Nicola Waugh</span> -->
+          </div>
+          <div id="about" style="font-size: 2vw; font-weight: bold; line-height:90%;">
+           NEOstalgia is a movement that comes from nostalgia but wants to propose a new one. It deals with the inability of homecoming and tries to activate a new way of homecoming. The movement aims to find new homes for the home-missing.<br /><br /><br />
+          </div>
+          <div id="aboutobject">
+           <span style="text-decoration:underline;">Homecoming Object 1: Fortune Cookie</span><br />
+           made in U.S.A by Asian American<br />
+           labeled as Chinese Snack<br />
+           longs for a home of whom are displaced (diaspora) and another home of whom fantasise the displacement (exotism)<br /><br />
+          </div>
+          <div id="aboutobject">
+            <span style="text-decoration:underline;">Homecoming Object 2: Chinese Checker</span><br />
+            originated in Germany<br />
+            name given by an American Company<br />
+            labeled as Chinese game<br />
+            longs for a home of whom fantasise the displacement (exotism)<br /><br />
+            </div>
+            <div id="stories" style="text-align:left;">
+            Once I ordered Chocomel aside my meal at Eazie, the notorious asian fast food restaurant around the corner. A fortune cookie was served aside the cup of Chocomel. This snack perfectly fit in as a snack to a sweet hot dutch drink, also as an auratic snack that explains the attempt of some cultural fantasy: “Right, you are eating supposably Chinese, and we serve you what supposably are Chinese.”
+            <br />
+            I do not remember having any through my life in China. Nevertheless, at that time I was so convinced that I received a Chinese snack, while looking at the Chinese characters and some dragon illustration on the golden-looking package.
+            <br />
+            This snack is trying to please everyone — it has the fortune told in English, Dutch, French and Spanish on the little paper. British, American, Dutch, French and Spanish and people all around the world gets their lucky freebee, indulging themselves in the golden crispy oriental dream.
+            <br />
+            There is someone left out whom Fortune Cookies forgot to please — the Chinese. The Chinese person is left there confused: he doesn’t even know about the most “Chinese” thing. He does not read a single word from inside, either.
+            <br />
+            When I needed to introduce a game in a class, I chose a chess game that I used to play a lot with my grandma. It is called Hop Chess in Chinese. I had to google the English name for it. It turned out as a surprise — it has the name “Chinese checkers” in English. I did not know about it at all. Everyone seemed convinced in my class. “You were playing it in China. It originates in China. Yes.”
+            <br />
+            Yes, that is why we would never call it Chinese checkers. It is like we calling pasta “Italian noodle” and baguette “French stick”. But the Italian or French would never do so.
+            <br />
+            But I was very confused that I had never heard about its Chinese origin.
+            <br /><br />
+            The fortune cookie and the Chinese checker want to come home. Me too. I want to come home with them.
+            <br /><br />
+            </div>
+
+            <div id="about" style="font-size: 2vw; font-weight: bold; line-height:90%;">
+            The movement is directed by two organisations: <br />WFFF (World Fusion Food Foundry) and <br />TGGG (Total Guide to Geography Gameplay).<br /><br />
+            WFFF proposes and performs a new way of serving Fortune Cookie — Unfolded Truth.
+            TGGG proposes a new design of Chinese Checker — Check-in Checker.<br /><br /><br />
+            </div>
+            <img id="logo" src="img/logo/logocombo.png" />
         </div>
-      </div>
-      <div class="manifesto">
-        <img src="img/stuff/manifesto.png" />
-        <div id="textbox2">
-          <p4>We cook for the homesick without symptons<br />
-              for the dinner before we are<br />
-              off the road, to our hometowns<br />
-              where we have never been.<br />
-              <br /><br />
-              We play chess untill we fall asleep.<br />
-              In the night, the pieces draw a new map on the checker board<br />
-              for us to revisit in the dream.</p4>
+
+        <div id="infomanifesto">
+            <span style="text-decoration:underline;">WFFF × TGGG announcement</span><br />
+
+            <span style="font-weight:bold">
+            We invent recipes of fusion food.<br />
+            We present guidelines of geography games<br />
+            We strictly adhere the following methods:<br />
+            to investigate single units in food and games of a culture;<br />
+            to eliminate misbelief which they carry;<br />
+            to reshape new identities that they are bonded with.<br /><br />
+            </span>
+
+            Food and game — <br /><br />
+
+            the gigantic domain of meaning and interpretation,<br />
+            the enormous archive of personal stories, history, politics and cultural identity.<br />
+            the overloaded signifier, urging the reconstruction within.<br />
+            the representative of us all, awaiting the public speech.<br /><br />
+
+
+
+            We cook for the homesick without symptons<br />
+            for the dinner before we are<br />
+            off the road, to our hometowns<br />
+            where we have never been.<br />
+            <br /><br />
+            We play chess untill we fall asleep.<br />
+            In the night, the pieces draw a new map on the checker board<br />
+            for us to revisit in the dream
+            <br /><br /><br /><br />
         </div>
-      </div>
-      <div class="free-area">
-        <div class="rotatingchecker">
-          <img src="img/stuff/checker.png" />
-        </div>
-        <div class="rotatingcookie">
-          <img src="img/stuff/fortune.png" />
-        </div>
-      </div>
-      </div> -->
-      <div class="main-title">
-        <img src="img/titles/nt5.png" />
-      </div>
-      <div class="graphic">
-        <img id="bubble1"src="img/stuff/bubble3.png" />
-        <img id="bubble2"src="img/stuff/bubble4.png" />
-        <img id="bubble3"src="img/stuff/bubble6.png" />
-      </div>
-      <div class="bars">
-        <div id="aboutbar">about</div>
-        <div id="manibar">manifesto</div>
-        <div id="checkerbar">Check-in Checker</div>
-        <div id="cookiebar">Unfolded Truth</div>
-      </div>
-      <div class="board">
-        <div id="cookieboard">
-          <br /><br />
-           <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">WFFF presents: <br />Unfolded Truth</span><br /><br /> -->
+        <div id="infocookie">
             <br /><br />
             <span>Speaker: Kexin Hao</span><br />
-            <a href="https://youtu.be/KpE7F3_lkqA" target="_blank"><span href>Watch Full Video Here</span><br /></a>
-            <img id="dish" src="img/stuff/dish.png" />
+            <img src="img/cookies.svg" />
+            <!-- <img id="dish" src="img/stuff/dish.png" /> -->
             <br />
             I shall never conceal our vision and standard. Deﬁnitely and beyond all doubt, the mission of WFFF is to contribute to the world repository of fusion food with creativity, knowledge and discipline. It is understood, that we must do our duty to educate our audience to eliminate their misbelief, and to liberate their thought and hands from the yoke of conventional cuisines.<br /><br />
             It is long believed that fortune cookie origins from China. Unfortunately, you are all wrong. The fortune cookie is an invented cultural artefact by Asian Americans who ran catering service in Los Angeles back in 20th century. People tried to import fortune cookies to China in late 80s, but failed the business because it was considered “too american”.<br /><br />
@@ -99,65 +176,63 @@
             (plating, serving)<br /><br />
             Comrades! A well-disciplined operation, armed with the knowledge, and guided by the core principles — these are the three main weapons with which we have achieved the victory of the dish!<br /><br />
             Let me pay high tribute and express my heartfelt gratitude to everyone who have dedicated themselves in the attention to the life cooking buffet!
-        </div>
-        <div id="checkerboard">
-          <br /><br />
-           <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">TGGG presents: <br />Check-in Checker: A Total Guide</span><br /><br /> -->
-           <a href="https://soundcloud.com/kexinhao/sets/how-to-play-chinese-checkers-a-total-guide" target="_blank"><span href>Listen To Full Audio Here</span><br /></a>
-           <div class="rotatingchecker">
-             <img src="img/stuff/checker.png" />
-           </div>
-          <br />
-          <p style="text-align:center;">
-            Checker checkes in 3 times:<br />
-            家<br />
-            Home<br />
-            Heim<br />
-            and is never arriving China.<br />
-          </p>
-          <iframe src="img/stuff/trip.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
+          </div>
+          <div id="infochecker">
+            <div id="rotatingchecker">
+              <img src="img/checker.svg" />
+            </div>
+
+            <br /><br />
+            <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">TGGG presents: <br />Check-in Checker: A Total Guide</span><br /><br /> -->
+            <a href="https://soundcloud.com/kexinhao/sets/how-to-play-chinese-checkers-a-total-guide" target="_blank"><span href>Listen To Full Audio Here</span><br /></a>
+            <br />
+            <p style="text-align:center;">
+                Checker checkes in 3 times:<br />
+                家<br />
+                Home<br />
+                Heim<br />
+                and is never arriving China.<br />
+            </p>
             Equipment<br />
             The Chinese checkers board is in the shape of a hexagon. It is constructed by dots and lines. Dots are where the pegs stay. Lines are the paths of the pegs’ move. The game board is divided into three parts. Each part is called “home” in Chinese, English and German respectively. They are three different homes of the player.
-          </p>
-          <p style="text-align:left; width:70%; margin-left:30%;">
+            <p style="text-align:left; width:70%; margin-left:30%;">
             家。<br />
-            <img src="img/stuff/jia.png" />
+            <img src="img/jia.svg" />
             我的第一个家在北京，我出生和长大的地方。小时候我经常跟我奶奶下跳棋，但我从来不知道跳棋在有些国家叫中国棋。但是中国并不是跳棋的起源地，中国是跳棋游戏公司假想的家。2016年，我离开北京去德国生活。我不经常回北京但是经常想念北京，更想念我跟奶奶玩儿跳棋的日子。那个是我永远也回不去的家。
-          </p>
-          <p>
+            </p>
+            <p>
             Player<br />
             This is a two-player game played by one player. This player has two counterparts. Each one aims to go from one home to another.
-          </p>
-          <p style="text-align:left; width:70%; margin-left:30%;">
+            </p>
+            <p style="text-align:left; width:70%; margin-left:30%;">
             Heim<br />
-            <img src="img/stuff/heim.png" />
+            <img src="img/heim.svg" />
             Mein zweites Heim befindet sich in Potsdam, wo ich ein Jahr in einem Studentenhaus auf einem Hügel namens Babelsberg verbracht habe. Deutschland gilt als einer der Orte, an denen der chinesische Checker seinen Ursprung hat. Ich kann mich nicht erinnern, dass jemand in Potsdam gespielt hat.
-          </p>
-          <p>
+            </p>
+            <p>
             Objective<br />
             The objective of the game is to be the first to move all the pegs into the other home. In a two-player-played-by-one game, each counterparts of the player races their pegs to occupy the homes where the opponent starts.
-          </p>
-          <p style="text-align:left; width:70%; margin-left:30%;">
+            </p>
+            <p style="text-align:left; width:70%; margin-left:30%;">
             Home<br />
-            <img src="img/stuff/home.png" />
+            <img src="img/home.svg" />
             My third home is Den Haag. It is my English-speaking home. I moved here after Potsdam. I have a complex relationship with the three homes of mine. I keep wanting to go from one to another. As soon as I arrive the other, I cannot wait to leave for another. And I am never able to tell which one the best is. My life is like a little peg racing on the Chinese checker board, always towards the other home, always arriving but always leaving.
-          </P>
-          <p>
+            </P>
+            <p>
             Rules
             <li>Rule 1. Players take turns to move a single peg of their own colour.</li>
             <li>Rule 2. Move: Players can move a peg to an adjacent empty dot, but not further, in any of the six directions.</li>
             <li>
-              Rule 3: Hop: Players can hop over other pegs. Each hop must be over an adjacent peg of any colour and to an empty dot directly beyond it, in any of the six directions. Hops can be multiple in one go.
+            Rule 3: Hop: Players can hop over other pegs. Each hop must be over an adjacent peg of any colour and to an empty dot directly beyond it, in any of the six directions. Hops can be multiple in one go.
             </li>
             <li>
-              Rule 4: Fast pace: a peg may hop over a non-adjacent piece. A hop consists of jumping over a distant piece (friendly or enemy) to a symmetrical position on the opposite side, in the same line of direction.
+            Rule 4: Fast pace: a peg may hop over a non-adjacent piece. A hop consists of jumping over a distant piece (friendly or enemy) to a symmetrical position on the opposite side, in the same line of direction.
             </li>
             <li>
-              Rule 5: Pegs are never removed from the board. Pegs never go outside the boarders.
+            Rule 5: Pegs are never removed from the board. Pegs never go outside the boarders.
             </li>
-          </p>
-          <p style="text-align:left; width:70%; margin-left:30%;">
+            </p>
+            <p style="text-align:left; width:70%; margin-left:30%;">
             and when the marbles knocked,<br />
             all of them, massively, rolling on the game board,<br />
             we would switch the colours and<br />
@@ -186,96 +261,12 @@
             all of them, massively, rolling on the game board,<br />
             we would switch the colours and<br />
             the sunny afternoon would restart.<br />
-          </p>
-        </div>
-        <div id="aboutboard">
-           <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">NEOstalgic Table</span><br /><br /> -->
-           <br /><br /><br /><br /><br /><br />
-           <div id="sub" style="font-style: italic; text-align:left;">
-               Woven into the fabric of memory, <br />
-               nostalgia is the simultaneous sweetness and the bitterness<br />
-               of wanting to return to another place or time.<br />
-               It is a longing for a home that no longer exists or has never existed.<br />
-               Nostalgia is a sentiment of loss and displacement,<br />
-               but also a romance with one's own fantasy.<br /><br />
-               <!-- <span id="credit" style="font-size: 0.9vw; font-style:normal;">Embodied Artifacts: Memory, Nostalgia and Mid-Century Objects by Nicola Waugh</span> -->
-           </div>
-           <div id="about" style="font-size: 2vw; font-weight: bold; line-height:90%;">
-               NEOstalgia is a movement that comes from nostalgia but wants to propose a new one. It deals with the inability of homecoming and tries to activate a new way of homecoming. The movement aims to find new homes for the home-missing.<br /><br /><br />
-           </div>
-           <div id="aboutobject">
-               <span style="text-decoration:underline;">Homecoming Object 1: Fortune Cookie</span><br />
-               made in U.S.A by Asian American<br />
-               labeled as Chinese Snack<br />
-               longs for a home of whom are displaced (diaspora) and another home of whom fantasise the displacement (exotism)<br /><br />
-           </div>
-           <div id="aboutobject">
-               <span style="text-decoration:underline;">Homecoming Object 2: Chinese Checker</span><br />
-               originated in Germany<br />
-               name given by an American Company<br />
-               labeled as Chinese game<br />
-               longs for a home of whom fantasise the displacement (exotism)<br /><br />
-           </div>
-           <div id="stories" style="text-align:left;">
-             Once I ordered Chocomel aside my meal at Eazie, the notorious asian fast food restaurant around the corner. A fortune cookie was served aside the cup of Chocomel. This snack perfectly fit in as a snack to a sweet hot dutch drink, also as an auratic snack that explains the attempt of some cultural fantasy: “Right, you are eating supposably Chinese, and we serve you what supposably are Chinese.”
-             <br />
-             I do not remember having any through my life in China. Nevertheless, at that time I was so convinced that I received a Chinese snack, while looking at the Chinese characters and some dragon illustration on the golden-looking package.
-             <br />
-             This snack is trying to please everyone — it has the fortune told in English, Dutch, French and Spanish on the little paper. British, American, Dutch, French and Spanish and people all around the world gets their lucky freebee, indulging themselves in the golden crispy oriental dream.
-             <br />
-             There is someone left out whom Fortune Cookies forgot to please — the Chinese. The Chinese person is left there confused: he doesn’t even know about the most “Chinese” thing. He does not read a single word from inside, either.
-             <br />
-             When I needed to introduce a game in a class, I chose a chess game that I used to play a lot with my grandma. It is called Hop Chess in Chinese. I had to google the English name for it. It turned out as a surprise — it has the name “Chinese checkers” in English. I did not know about it at all. Everyone seemed convinced in my class. “You were playing it in China. It originates in China. Yes.”
-             <br />
-             Yes, that is why we would never call it Chinese checkers. It is like we calling pasta “Italian noodle” and baguette “French stick”. But the Italian or French would never do so.
-             <br />
-             But I was very confused that I had never heard about its Chinese origin.
-             <br /><br />
-             The fortune cookie and the Chinese checker want to come home. Me too. I want to come home with them.
-             <br /><br />
-           </div>
+            </p>
 
-            <div id="about" style="font-size: 2vw; font-weight: bold; line-height:90%;">
-                The movement is directed by two organisations: <br />WFFF (World Fusion Food Foundry) and <br />TGGG (Total Guide to Geography Gameplay).<br /><br />
-                WFFF proposes and performs a new way of serving Fortune Cookie — Unfolded Truth.
-                TGGG proposes a new design of Chinese Checker — Check-in Checker.<br /><br /><br />
-            </div>
-            <img id="logo" src="img/logo/logocombo.png" />
-
-        </div>
-        <div id="maniboard">
-          <!-- <span style="font-family: 'Concert One', cursive; -webkit-text-stroke: 0.06vw black; -webkit-text-fill-color: rgb(180, 180, 180); font-size:2.5vw;line-height:80%;">Manifesto</span><br /><br /> -->
-          <span style="text-decoration:underline;">WFFF × TGGG announcement</span><br />
-
-          <span style="font-weight:bold">
-            We invent recipes of fusion food.<br />
-            We present guidelines of geography games<br />
-            We strictly adhere the following methods:<br />
-            to investigate single units in food and games of a culture;<br />
-            to eliminate misbelief which they carry;<br />
-            to reshape new identities that they are bonded with.<br /><br />
-          </span>
-
-          Food and game — <br /><br />
-
-          the gigantic domain of meaning and interpretation,<br />
-          the enormous archive of personal stories, history, politics and cultural identity.<br />
-          the overloaded signifier, urging the reconstruction within.<br />
-          the representative of us all, awaiting the public speech.<br /><br />
-
-
-
-          We cook for the homesick without symptons<br />
-          for the dinner before we are<br />
-          off the road, to our hometowns<br />
-          where we have never been.<br />
-          <br /><br />
-          We play chess untill we fall asleep.<br />
-          In the night, the pieces draw a new map on the checker board<br />
-          for us to revisit in the dream
-          <br /><br /><br /><br />
-        </div>
+          </div>
       </div>
-    </div>
-  </body>
+   </div>
+
+</body>
+
 </html>
