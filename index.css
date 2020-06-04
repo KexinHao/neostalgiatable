@@ -83,7 +83,7 @@ a:hover, a:active, a:visited{
 #imagemanifesto img{
   display:block;
   width: 100%;
-  margin-left:5%;
+  margin-left:0%;
   margin-right: -10%;
 }
 #imagecookie iframe{
