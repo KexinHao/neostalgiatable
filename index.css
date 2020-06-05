@@ -166,6 +166,8 @@ a:hover, a:active, a:visited{
     flex-direction: column;
   }
   .imagebox{
+    height:100%;
+    overflow: hidden;
     padding-top:3vh;
     padding-left:1vw;
     padding-right:1vw;
@@ -173,9 +175,9 @@ a:hover, a:active, a:visited{
     width: 100vw;
   }
   .informationbox {
+    height:100%;
     order:2;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     padding-left:4vw;
     width: 90%;
     line-height: 99%;
